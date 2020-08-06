@@ -8,7 +8,7 @@
   <a href="https://whportal.github.io"><img src="https://img.shields.io/badge/nacos-1.3.1-blue" alt="Nacos版本"></a>
   <a href="https://whportal.github.io"><img src="https://img.shields.io/badge/springboot-2.2.2-blue" alt="Springboot版本"></a>
   <a href="https://whportal.github.io"><img src="https://img.shields.io/badge/springcloud-Hoxton.RELEASE-blue" alt="SpringCloud版本"></a>
-  <a href="https://whportal.github.io"><img src="https://img.shields.io/badge/springcloudAlibaba-2.2.1.RELEASE-blue" alt="SpringCloudAlibaba版本"></a>
+  <a href="https://whportal.github.io"><img src="https://img.shields.io/badge/springcloudAlibaba-2.2.1-blue" alt="SpringCloudAlibaba版本"></a>
 </p>
 
 ## Spring Cloud Alibaba 技术栈 demo
