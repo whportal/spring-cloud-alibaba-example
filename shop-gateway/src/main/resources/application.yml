@@ -1,0 +1,30 @@
+server:
+  port: 10001
+spring:
+  application:
+    name: shop-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: http://127.0.0.1:8848
+    gateway:
+      discovery:
+        locator:
+          enabled: true # 让 gateway 从 nacos 中获取服务信息
+      routes:
+        - id: service-product # 当前路由的标识 要求唯一
+          uri: lb://service-product # 请求要转发的地址
+          predicates: # 断言 即路由转发要满足的条件
+            - Path=/api/product/** # 当请求路径满足 Path 指定的规则时，才进行路由转发
+          # - Token=wh-token # 使用自定义路由断言 当请求头 携带  wh-token 并且不为空才路由
+          order: 1 # 路由的优先级，数字越小级别越高
+          filters: # 过滤器 请求在传递的过程中可以通过过滤器对其进行一定得修改
+            - StripPrefix=1 # 转发之前去掉一层路径
+            - Log=true,false
+        - id: service-order # 当前路由的标识 要求唯一
+          uri: lb://service-order # 请求要转发的地址
+          predicates: # 断言 即路由转发要满足的条件
+            - Path=/api/order/** # 当请求路径满足 Path 指定的规则时，才进行路由转发
+          order: 1 # 路由的优先级，数字越小级别越高
+          filters: # 过滤器 请求在传递的过程中可以通过过滤器对其进行一定得修改
+            - StripPrefix=1 # 转发之前去掉一层路径
