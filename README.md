@@ -13,10 +13,10 @@
 
 ## Spring Cloud Alibaba 技术栈 demo
 
-* 注册中心：`Nacos`
-* 配置中心：`Nacos`
-* 限流降级：``Sentinel` `
-* 消息中间件：`RocketMQ`
-* 网关：`Spring Cloud Gateway`
-* 服务调用：`Feign`
-* 分布式事务：`Seata`
+* 『注册中心』：`Nacos`
+* 『配置中心』：`Nacos`
+* 『限流降级』：``Sentinel` `
+* 『消息中间件』：`RocketMQ`
+* 『网关』：`Spring Cloud Gateway`
+* 『服务调用』：`Feign`
+* 『分布式事务』：`Seata`
